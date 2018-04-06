@@ -51,7 +51,7 @@ export default class Presentation extends React.Component {
           </Text>
         </Slide>
         <Slide transition={['fade']} bgColor="tertiary">
-          <Heading size={3} textColor="secondary">
+          <Heading size={6} textColor="secondary">
             ¿Qué es Git y por qué quiero aprenderlo?
           </Heading>
           <List>
@@ -79,7 +79,17 @@ export default class Presentation extends React.Component {
             Primero lo primero
           </Heading>
           <List>
-
+            <ListItem>
+              Un proyecto es un repositorio.
+            </ListItem>
+            <ListItem>
+              En un repositorio, existen cambios confirmados, preparados,
+              y sin preparar.
+            </ListItem>
+            <ListItem>
+              Un conjunto de cambios almacenados en el repositorio es un
+              commit (Confirmacion).
+            </ListItem>
           </List>
         </Slide>
         <Slide transition={['fade']} bgColor="secondary" textColor="primary">
