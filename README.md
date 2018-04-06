@@ -9,4 +9,4 @@ GitHub estuviese en Google Drive o algo así.
 ## Tengo una pregunta
 Si tienes una pregunta y estoy en medio de la presentación, puedes hacerla al
 final. Si no estoy dando la platica, puedes dirigirme la palabra o contactarme
-en mi correo: rafael@trfs.me
+a través de mi correo: rafael@trfs.me
