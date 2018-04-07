@@ -254,6 +254,23 @@ export default class Presentation extends React.Component {
             </ListItem>
           </List>
         </Slide>
+        <Slide transition={['fade']} bgColor="tertiary">
+          <Heading size={6} textColor="secondary">
+            Recursos para seguir aprendiendo
+          </Heading>
+          <List>
+            <ListItem>
+              El libro de Git: https://git-scm.com/book/es/v2
+            </ListItem>
+            <ListItem>
+              Tutoriales de Git de Atlassian: https://www.atlassian.com/git/tutorials
+            </ListItem>
+            <ListItem>
+              Acordion de git en español: https://github.com/arslanbilal/git-cheat-sheet/blob/master/other-sheets/git-cheat-sheet-es.md
+            </ListItem>
+          </List>
+        </Slide>
+
 
       </Deck>
     );
