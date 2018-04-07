@@ -141,7 +141,7 @@ export default class Presentation extends React.Component {
           </Text>
           <Text textAlign="left">
             <Code>
-              git push
+              git pull
             </Code> obtiene y aplica commits nuevos de un repositorio remoto
           </Text>
           <Text textAlign="left">
