@@ -12,7 +12,7 @@ import {
   Quote,
   Slide,
   Text,
-  MarkdownSlides
+  Code
 } from 'spectacle';
 
 // Import theme
@@ -56,21 +56,31 @@ export default class Presentation extends React.Component {
           </Heading>
           <List>
             <ListItem>
-              Una herramienta para mantener un control de los cambios que
-              realizas a un proyecto.
+              Una herramienta para rastrear los cambios en archivos.
             </ListItem>
             <ListItem>
-              Puedes trabajar en varios aspectos de un proyecto personal
-              aisladamente e integrar tus cambios, nunca perdiendo versiones
-              viejas.
-            </ListItem>
-            <ListItem>
-              O puedes integrar las contribuciones de varios integrantes
-              de un equipo de trabajo facilmente.
+              Puedes almacenar versiones de estos archivos en lugares remotos
+              para facilitar el flujo de trabajo individual y colaborativo.
             </ListItem>
             <ListItem>
               En breve, git hace que manejar varias versiones de un proyecto,
               ya sea individual o colaborativo, no sea un dolor de cabeza.
+            </ListItem>
+          </List>
+        </Slide>
+        <Slide transition={['fade']} bgColor="tertiary">
+          <Heading size={6} textColor="secondary">
+            Instalación
+          </Heading>
+          <List>
+            <ListItem>
+              En Debian y derivados (eg. Ubuntu): <Code>sudo apt install git</Code>
+            </ListItem>
+            <ListItem>
+              En Fedora y derivados: <Code>sudo dnf install git</Code>
+            </ListItem>
+            <ListItem>
+              En Windows o macOS, descargar de la pagina oficial: <Code>https://git-scm.com/downloads</Code>
             </ListItem>
           </List>
         </Slide>
@@ -80,23 +90,65 @@ export default class Presentation extends React.Component {
           </Heading>
           <List>
             <ListItem>
-              Un proyecto es un repositorio.
+              Git guarda un historial de tus archivos
             </ListItem>
             <ListItem>
-              En un repositorio, existen cambios confirmados, preparados,
-              y sin preparar.
+              Hace copias de los archivos en ciertos puntos.
             </ListItem>
             <ListItem>
-              Un conjunto de cambios almacenados en el repositorio es un
-              commit (Confirmacion).
+              Decides cuando se hace la copia creando una confirmación (commit)
+            </ListItem>
+            <ListItem>
+              Puedes navegar entre commits
+            </ListItem>
+            <ListItem>
+              Vas agregando los cambios que quiere confirmar a una zona de
+              preparación (staging)
+            </ListItem>
+            <ListItem>
+              Puedes sincronizar tu historial de commits con una copia
+              remota del repositorio.
             </ListItem>
           </List>
         </Slide>
-        <Slide transition={['fade']} bgColor="secondary" textColor="primary">
-          <BlockQuote>
-            <Quote>Example Quote</Quote>
-            <Cite>Author</Cite>
-          </BlockQuote>
+        <Slide transition={['fade']} bgColor="tertiary">
+          <Heading size={6} textColor="secondary">
+            Comandos basicos
+          </Heading>
+          <Text textAlign="left">
+            <Code>
+              git init
+            </Code> inicializa un repo nuevo.
+          </Text>
+          <Text textAlign="left">
+            <Code> git add &lt;archivo(s)&gt
+            </Code> agrega archivos al area de preparación.
+          </Text>
+          <Text textAlign="left">
+            <Code>
+              git status
+            </Code> muestra el estado de los cambios no confirmados.
+          </Text>
+          <Text textAlign="left">
+            <Code>
+              git commit
+            </Code> confirma los cambios agregados al area de preparación.
+          </Text>
+          <Text textAlign="left">
+            <Code>
+              git push
+            </Code> sube commits nuevos a un repositorio remoto
+          </Text>
+          <Text textAlign="left">
+            <Code>
+              git push
+            </Code> obtiene y aplica commits nuevos de un repositorio remoto
+          </Text>
+          <Text textAlign="left">
+            <Code>
+              git clone
+            </Code> copia un repositorio remoto a un directorio nuevo
+          </Text>
         </Slide>
       </Deck>
     );
