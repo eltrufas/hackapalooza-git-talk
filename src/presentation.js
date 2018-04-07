@@ -11,6 +11,7 @@ import {
   List,
   Quote,
   Slide,
+  Appear,
   Text,
   Code
 } from 'spectacle';
@@ -120,54 +121,121 @@ export default class Presentation extends React.Component {
               git init
             </Code> inicializa un repo nuevo.
           </Text>
+          <Appear>
           <Text textAlign="left">
             <Code> git add &lt;archivo(s)&gt
             </Code> agrega archivos al area de preparación.
           </Text>
+          </Appear>
+          <Appear>
           <Text textAlign="left">
             <Code>
               git status
             </Code> muestra el estado de los cambios no confirmados.
           </Text>
+          </Appear>
+          <Appear>
           <Text textAlign="left">
             <Code>
               git commit
             </Code> confirma los cambios agregados al area de preparación.
           </Text>
+          </Appear>
+          <Appear>
           <Text textAlign="left">
             <Code>
               git push
             </Code> sube commits nuevos a un repositorio remoto
           </Text>
+          </Appear>
+          <Appear>
           <Text textAlign="left">
             <Code>
               git pull
             </Code> obtiene y aplica commits nuevos de un repositorio remoto
           </Text>
+          </Appear>
+          <Appear>
           <Text textAlign="left">
             <Code>
-              git clone
+              git clone &lt;dirección&gt
             </Code> copia un repositorio remoto a un directorio nuevo
           </Text>
+          </Appear>
         </Slide>
-        <Slide transition={['fade']} bgColor="tertiary">
+
+        <Slide>
           <Heading size={6} textColor="secondary">
-            ¿Qué es github y por qué lo quiero?
+            Mas comandos
+          </Heading>
+          <Text textAlign="left">
+            <Code>
+              git log
+            </Code> muestra un historial de commits.
+          </Text>
+
+          <Appear>
+          <Text textAlign="left">
+            <Code>
+              git reset HEAD &lt;archivo(s)&gt
+            </Code> quita el archivo del area de preparación.
+          </Text>
+          
+          </Appear>
+          <Appear>
+          <Text textAlign="left">
+            <Code>git checkout -- &lt;archivo(s)&gt</Code> revierte el archvio 
+            al ultimo commit.
+          </Text>
+          
+          </Appear>
+          <Appear>
+          <Text textAlign="left">
+            <Code>git revert</Code> revierte los cambios del ultimo commit.
+          </Text>
+        
+          </Appear>
+          <Appear>
+          <Text textAlign="left">
+            <Code>git remote add &lt;nombre&gt &lt;dirección&gt</Code> agrega
+            un repositorio remoto.
+          </Text>
+          
+          </Appear>
+          <Appear>
+          <Text textAlign="left">
+            <Code>git fetch</Code> actualiza los repositorios remotos
+          </Text>
+
+          </Appear>
+        </Slide>
+      
+        <Slide transition={['fade']} bgColor="primary" textColor="tertiary">
+          <Heading size={6} textColor="secondary">
+            Ramas
           </Heading>
           <List>
             <ListItem>
-              Servicio para hospedar repositorios de git remotamente.
+              Es buena practica crear una rama nueva para cada cambio grande
+              (feature)
             </ListItem>
             <ListItem>
-              Controlas quien puede modificar tus repositorios para facilitar
-              la colaboración
+              <Code>git branch</Code> lista las ramas existentes.
             </ListItem>
             <ListItem>
-              Expande git con otras funciones para facilitar flujos de
-              trabajo comunes.
+              <Code>git branch &lt;nombre&gt</Code> crea una rama nueva.
+            </ListItem>
+            <ListItem>
+              <Code>git checkout &lt;nombre&gt</Code> cambia la rama actual.
+            </ListItem>
+            <ListItem>
+              <Code>git merge &lt;nombre&gt</Code> combina los cambios de una
+              rama a la rama actual.
             </ListItem>
           </List>
         </Slide>
+
+                
       </Deck>
     );
   }
