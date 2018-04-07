@@ -150,6 +150,24 @@ export default class Presentation extends React.Component {
             </Code> copia un repositorio remoto a un directorio nuevo
           </Text>
         </Slide>
+        <Slide transition={['fade']} bgColor="tertiary">
+          <Heading size={6} textColor="secondary">
+            ¿Qué es github y por qué lo quiero?
+          </Heading>
+          <List>
+            <ListItem>
+              Servicio para hospedar repositorios de git remotamente.
+            </ListItem>
+            <ListItem>
+              Controlas quien puede modificar tus repositorios para facilitar
+              la colaboración
+            </ListItem>
+            <ListItem>
+              Expande git con otras funciones para facilitar flujos de
+              trabajo comunes.
+            </ListItem>
+          </List>
+        </Slide>
       </Deck>
     );
   }
